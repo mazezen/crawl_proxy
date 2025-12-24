@@ -31,6 +31,12 @@ jobs:
       - name: Run fetch script
         run: python3 main.py # 运行 main.py 作为入口脚本
 
+      # 设置 Git 提交者身份
+      - name: Set up git config
+        run: |
+          git config --global user.email "mazezen24@gmail.com"
+          git config --global user.name "mazezen"
+
       # 第五步：如果有数据更新，提交并推送更改
       - name: Commit and push if new data
         run: |
