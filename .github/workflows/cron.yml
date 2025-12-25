@@ -3,6 +3,7 @@ name: Run Proxy Fetch Every 30 Minutes
 env:
   geonode_url: https://proxylist.geonode.com/api/proxy-list?limit=500&page=1&sort_by=lastChecked&sort_type=desc
   proxy_list_url: https://www.proxy-list.download/api/v1/get?type=
+  free_proxy_list_url: https://free-proxy-list.net/zh-cn/ssl-proxy.html
 
 # 触发工作流的条件
 on:
