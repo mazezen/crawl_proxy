@@ -1,8 +1,7 @@
 import requests
 import time
 
-def fetch():
-
+def fetch(env):
     filePath = "./data.dat"
 
     with open(file=filePath, mode='w') as file:
@@ -13,15 +12,14 @@ def fetch():
     socks4_proxies = []
     socks5_proxies = []
 
-
-    url = f"https://proxylist.geonode.com/api/proxy-list?limit=500&page={1}&sort_by=lastChecked&sort_type=desc"
     try:
-        response = requests.get(url=url, timeout=10)
+        response = requests.get(url=env.get('geonode_url'), timeout=10)
         if response.status_code != 200:
             print("[-] 获取代理 失败" + str(response.status_code))
+            return
 
         res_json = response.json()
-        print(f"res_json: {res_json}")
+        # print(f"res_json: {res_json}")
 
         for row in res_json['data']:
             ip = row["ip"].strip()
@@ -39,10 +37,9 @@ def fetch():
                 d = f"https://{ip}:{port}"
                 https_proxies.append(d)
 
-        print("[-] 结束本次获取代理IP ")
+        # print("[-] 结束本次获取代理IP ")
         # 写入文件
         with open(filePath, "a") as file:
-            # 按类别写入代理
             for v in socks5_proxies: 
                 file.write(v + "\n")
             for v in socks4_proxies: 
@@ -57,3 +54,64 @@ def fetch():
     
     
    
+def crawl_proxy_list(env):
+
+    filepath = "./data2.dat"
+
+    try:
+        url = env.get('proxy_list_url')+"socks5"
+        print(url)
+        response_socks5 = requests.get(url=url)
+        if response_socks5.status_code != 200:
+            print("[-] 获取 proxy_list 代理 失败" + str(response_socks5.status_code))
+            return
+        
+        if response_socks5.headers.get("Content-Type") == "text/plain; charset=utf-8":
+            with open(filepath, 'a') as file:
+                file.write("========================= socks5 =========================\n")
+                file.write(response_socks5.text)
+                file.write("\n\n")
+
+        time.sleep(5)
+        url_socks4 = env.get('proxy_list_url')+"socks4"
+        print(url_socks4)
+        response_socks4 = requests.get(url=url_socks4)
+        if response_socks4.status_code != 200:
+            print("[-] 获取 proxy_list socks4 代理 失败" + str(response_socks4.status_code))
+            return
+
+        if response_socks4.headers.get("Content-Type") == "text/plain; charset=utf-8":
+            with open(filepath, 'a') as file:
+                file.write("========================= socks4 =========================\n")
+                file.write(response_socks4.text)
+                file.write("\n\n")
+
+        time.sleep(5)
+        url_https = env.get("proxy_list_url")+"https"
+        print(url_https)
+        response_https = requests.get(url=url_https)
+        if response_https.status_code != 200:
+            print("[-] 获取 proxy_list https 代理 失败" + str(response_https.status_code))
+            return
+        if response_https.headers.get("Content-Type") == "text/plain; charset=utf-8":
+            with open(filepath, 'a') as file:
+                file.write("========================= https =========================\n")
+                file.write(response_https.text)
+                file.write("\n\n")
+
+        time.sleep(5)
+        url_http = env.get("proxy_list_url")+"http"
+        print(url_http)
+        response_http = requests.get(url=url_http)
+        if response_http.status_code != 200:
+            print("[-] 获取 proxy_list https 代理 失败" + str(response_http.status_code))
+            return
+        if response_http.headers.get("Content-Type") == "text/plain; charset=utf-8":
+            with open(filepath, 'a') as file:
+                file.write("========================= http =========================\n")
+                file.write(response_http.text)
+            
+
+
+    except requests.exceptions.ConnectionError as e:
+        print("[-] 获取代理失败 " + str(e))

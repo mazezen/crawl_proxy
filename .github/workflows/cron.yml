@@ -1,4 +1,8 @@
-name: Run Proxy Fetch Every 20 Minutes
+name: Run Proxy Fetch Every 30 Minutes
+
+env:
+  geonode_url: https://proxylist.geonode.com/api/proxy-list?limit=500&page=1&sort_by=lastChecked&sort_type=desc
+  proxy_list_url: https://www.proxy-list.download/api/v1/get?type=
 
 # 触发工作流的条件
 on:
@@ -11,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest # 选择运行环境
 
     permissions:
-      contents: write # 赋予内容（例如提交、推送）的写入权限
+      contents: write # 赋予内容（提交、推送）的写入权限
 
     steps:
       # 第一步：签出仓库代码

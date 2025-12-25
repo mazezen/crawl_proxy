@@ -1,5 +1,8 @@
-# crawl proxy
+# crawl proxy 动态 IP 池代理库
 
-> 定时爬取 HTTP | HTTPS | SOCKS4 | SOCKS5 IP
->
-> IP 保存到 data.dat 文件中
+> HTTP | HTTPS | SOCKS4 | SOCKS5
+
+## 动态 IP 库每 30 分钟更新一次
+
+- data.dat
+- data2.dat
