@@ -8,6 +8,6 @@ from parse import parse
 
 if __name__ == '__main__':
     env = parse()
-    # fetch(env)
-    # crawl_proxy_list(env)
+    fetch(env)
+    crawl_proxy_list(env)
     crawl_free_proxy_list(env=env)
