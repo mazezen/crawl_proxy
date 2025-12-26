@@ -1,6 +1,8 @@
 import requests
 import time
 from bs4 import BeautifulSoup
+from tools import exec_js
+
 
 def fetch(env):
     filePath = "./data.dat"
@@ -133,8 +135,6 @@ def crawl_free_proxy_list(env):
         soup = BeautifulSoup(response.text, "html.parser")
         # print(soup.prettify())
 
-       
-
         lines = []
         for row in soup.find("table").find_all("tr")[1:]:
             cols = row.find_all("td")
@@ -154,3 +154,39 @@ def crawl_free_proxy_list(env):
         with open('./data3.dat', 'a') as file:
             for l in lines:
                 file.write(l+"\n")
+
+def crawl_proxy_nova(env):
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+        }
+
+        response = requests.get(url=env.get('proxy_nova_url'), headers=headers, timeout=10)
+
+        if response.headers.get('Content-Type') == "text/html; charset=UTF-8":
+            soup = BeautifulSoup(response.text, "html.parser")
+
+            lines = []
+            for row in soup.find("table").find_all("tr")[1:]:
+                cols = row.find_all("td")
+                if len(cols) == 7:
+                    ip = cols[0].select("script")[0].text.split('document.write(',maxsplit=1)[1][:-1]   
+                    ip = exec_js(ip) 
+                    port = cols[1].text.strip()
+                    speed = cols[3].select("small")[0].text
+                    country = cols[5].select("a")[0].text.split("-")[0]   
+                    line = f"ip: {ip}  port: {port}  speed: {speed}  country: {country}"
+                    lines.append(line.strip())
+
+            filepath = "./data4.dat"
+
+            with open(filepath, 'w') as file:
+                pass
+
+            with open(filepath, 'a') as file:
+                for line in lines:
+                    file.write(line+"\n")
+
+    except requests.exceptions.ConnectionError as e:
+        print(f"[-] 获取 free_proxy_list proxy 代理失败: {e}")
+        return None
