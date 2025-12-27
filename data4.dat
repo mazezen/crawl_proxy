@@ -1,35 +1,35 @@
-ip: 8.210.17.35  port: 4321  speed: 2657 ms  country: Hong Kong
-ip: 47.250.11.111  port: 41  speed: 2445 ms  country: Malaysia
-ip: 8.220.204.92  port: 3129  speed: 2597 ms  country: South Korea
-ip: 47.91.115.179  port: 45  speed: 2414 ms  country: United Arab Emirates
-ip: 47.238.134.126  port: 51  speed: 2417 ms  country: Hong Kong
-ip: 47.90.149.238  port: 4145  speed: 2271 ms  country: United States
-ip: 47.91.115.179  port: 1000  speed: 2434 ms  country: United Arab Emirates
-ip: 47.250.159.65  port: 161  speed: 2443 ms  country: Malaysia
-ip: 8.213.134.213  port: 18080  speed: 2681 ms  country: South Korea
-ip: 121.230.9.14  port: 1080  speed: 1489 ms  country: China
-ip: 8.130.34.44  port: 6666  speed: 2625 ms  country: China
-ip: 47.250.51.110  port: 8080  speed: 2409 ms  country: Malaysia
-ip: 47.116.181.146  port: 10000  speed: 2587 ms  country: China
-ip: 47.251.87.199  port: 85  speed: 2495 ms  country: United States
-ip: 47.237.107.41  port: 193  speed: 2406 ms  country: Singapore
-ip: 8.211.49.86  port: 1088  speed: 2129 ms  country: Germany
-ip: 8.215.15.163  port: 104  speed: 2479 ms  country: Indonesia
-ip: 47.251.73.54  port: 11  speed: 2404 ms  country: United States
-ip: 8.213.222.247  port: 18080  speed: 2427 ms  country: Thailand
-ip: 47.238.60.156  port: 18080  speed: 2401 ms  country: Hong Kong
-ip: 8.213.222.157  port: 1080  speed: 2524 ms  country: Thailand
-ip: 103.145.34.10  port: 55443  speed: 3825 ms  country: Indonesia
-ip: 8.212.165.164  port: 808  speed: 2583 ms  country: Philippines
-ip: 47.250.155.254  port: 5060  speed: 2375 ms  country: Malaysia
-ip: 8.211.194.85  port: 100  speed: 2178 ms  country: United Kingdom
-ip: 47.104.27.249  port: 8001  speed: 2584 ms  country: China
-ip: 47.237.107.41  port: 443  speed: 2433 ms  country: Singapore
-ip: 209.97.150.167  port: 8080  speed: 615 ms  country: United States
-ip: 8.215.12.103  port: 8085  speed: 2689 ms  country: Indonesia
-ip: 8.215.12.103  port: 8001  speed: 2620 ms  country: Indonesia
-ip: 47.250.155.254  port: 1000  speed: 2393 ms  country: Malaysia
-ip: 8.213.134.213  port: 1111  speed: 2733 ms  country: South Korea
-ip: 8.215.12.103  port: 8003  speed: 2813 ms  country: Indonesia
-ip: 47.91.89.3  port: 3128  speed: 2149 ms  country: Germany
-ip: 8.215.12.103  port: 8448  speed: 2627 ms  country: Indonesia
+ip: 188.191.165.159  port: 8080  speed: 324 ms  country: Russia
+ip: 196.1.93.16  port: 80  speed: 849 ms  country: Senegal
+ip: 87.255.196.143  port: 80  speed: 787 ms  country: Kazakhstan
+ip: 39.102.213.3  port: 8080  speed: 2587 ms  country: China
+ip: 154.205.147.214  port: 80  speed: 753 ms  country: Oman
+ip: 42.98.241.58  port: 80  speed: 1603 ms  country: Hong Kong
+ip: 47.237.92.86  port: 8080  speed: 2474 ms  country: Singapore
+ip: 8.138.149.37  port: 8008  speed: 2632 ms  country: China
+ip: 8.138.149.37  port: 9080  speed: 2760 ms  country: China
+ip: 8.138.149.37  port: 8081  speed: 2583 ms  country: China
+ip: 39.102.213.3  port: 8888  speed: 2575 ms  country: China
+ip: 47.109.83.196  port: 9080  speed: 2881 ms  country: China
+ip: 79.110.200.27  port: 8000  speed: 962 ms  country: Poland
+ip: 134.209.29.120  port: 8080  speed: 385 ms  country: United Kingdom
+ip: 35.209.198.222  port: 80  speed: 3814 ms  country: United States
+ip: 8.212.151.166  port: 4002  speed: 2508 ms  country: Philippines
+ip: 51.161.131.235  port: 8080  speed: 1935 ms  country: Australia
+ip: 47.250.11.111  port: 41  speed: 2439 ms  country: Malaysia
+ip: 120.25.189.254  port: 9080  speed: 2570 ms  country: China
+ip: 47.251.73.54  port: 11  speed: 2402 ms  country: United States
+ip: 8.212.168.170  port: 100  speed: 2569 ms  country: Philippines
+ip: 62.60.195.94  port: 80  speed: 568 ms  country: Iran
+ip: 157.180.118.86  port: 80  speed: 249 ms  country: Finland
+ip: 154.17.228.122  port: 80  speed: 437 ms  country: United States
+ip: 218.252.118.9  port: 80  speed: 1116 ms  country: Hong Kong
+ip: 172.237.73.24  port: 80  speed: 1277 ms  country: Singapore
+ip: 38.54.101.90  port: 80  speed: 476 ms  country: United States
+ip: 51.8.61.60  port: 80  speed: 236 ms  country: United States
+ip: 209.135.168.41  port: 80  speed: 699 ms  country: United States
+ip: 195.181.173.65  port: 80  speed: 205 ms  country: Netherlands
+ip: 8.213.195.191  port: 30000  speed: 2501 ms  country: Thailand
+ip: 8.211.195.173  port: 6379  speed: 2199 ms  country: United Kingdom
+ip: 8.213.222.157  port: 1080  speed: 2522 ms  country: Thailand
+ip: 103.145.34.10  port: 55443  speed: 3772 ms  country: Indonesia
+ip: 94.30.162.42  port: 80  speed: 237 ms  country: Latvia
