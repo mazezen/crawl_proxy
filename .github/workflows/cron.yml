@@ -1,4 +1,4 @@
-name: Run Proxy Fetch Every 30 Minutes
+name: Running at 9am every morning
 
 env:
   geonode_url: https://proxylist.geonode.com/api/proxy-list?limit=500&page=1&sort_by=lastChecked&sort_type=desc
@@ -9,7 +9,7 @@ env:
 # 触发工作流的条件
 on:
   schedule:
-    - cron: "*/30 * * * *" # 每 30 分钟触发一次
+    - cron: "0 9 * * *" 
   workflow_dispatch: # 允许手动触发工作流
 
 jobs:
