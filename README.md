@@ -2,7 +2,7 @@
 
 > HTTP | HTTPS | SOCKS4 | SOCKS5
 
-## 动态 IP 库每 30 分钟更新一次
+## 动态 IP 库 每天定时更新
 
 - data.dat 大约 500 个 IP 左右
 - data2.dat 大约 2000 个 IP 左右
